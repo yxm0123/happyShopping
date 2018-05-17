@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>慢慢买</title>
+  <script src="../lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/common.css">
+
+</head>
+<body>
+  <div class="mm_container">
+    <!--头部区域-->
+    <div class="mm_header">
+      <div class="header_top">
+        <div class="login fl">
+          <a href="index.html">
+            <img src="../images/header_logo.png">
+          </a>
+        </div>
+        <div class="dowload fr">
+          <img src="../images/header_app.png" >
+        </div>
+      </div>
+
+      <div class="header_bottom">
+        <div class="search">
+          <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+
+        <div class="btn">
+          <button>搜索</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--主体区域-->
+    <div class="mm_main">
+      <div class="main_list">
+          <ul class="clearfix">
+           <!--动态渲染-->
+
+          </ul>
+      </div>
+
+      <!--超值折扣推荐-->
+      <div class="main_disco">
+
+        <span>超值折扣推荐</span>
+        <a href="moneyCtrl.html">
+          <img src="images/more.png">
+        </a>
+      </div>
+
+      <!--产品区域-->
+      <div class="main_product">
+        <ul class="product_list">
+          <!--动态渲染-->
+
+        </ul>
+      </div>
+
+      <!--获取更多-->
+      <div class="main_getmore">
+
+        <a  class="more" href="moneyCtrl.html">更多优惠信息>></a>
+      </div>
+
+      <!--品牌排行-->
+      <div class="main_rank">
+        <span>品牌排行</span>
+        <a href="moneyCtrl.html">
+          <img src="images/more.png">
+        </a>
+      </div>
+    </div>
+
+    <!--尾部区域-->
+    <div class="mm_footer">
+
+      <div class="tables clearfix" >
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="goTop">
+          <img src="images/top.jpg" >
+         <span>回到顶部</span>
+        </a>
+      </div>
+
+      <div class="main_msg">
+       <div class="msg_top">
+         <p>
+           <a href="javascript:;" style="color: red">手机APP下载</a>
+           <a href="javascript:;">慢慢买手机版</a>
+           <a href="javascript:;">--掌上比价平台</a>
+
+         </p>
+         <p>
+           <a href="javascript:;">
+             <a href="javascript:;">手机APP下载</a>
+           </a>
+         </p>
+       </div>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index.js"></script>
+
+<script type="text/html" id="listTemp">
+  {{ each result v i }}
+     <li>
+        <a href="{{ v.titlehref }}">
+          {{@ v.img }}
+          <p>{{ v.name }}</p>
+        </a>
+     </li>
+   {{ /each}}
+</script>
+
+<script type="text/html" id="prodTemp">
+
+  {{ each result v i }}
+    <li >
+      <a href=" moneyproduct.html?productId={{v.productId }}">
+        <div class="pic fl">
+         {{@ v.productImgSm}}
+        </div>
+
+        <!--信息部分-->
+        <div class="info fr">
+          <p class="info_title">{{ v.productName }}
+            <span>{{ v.productPinkage }}</span>
+          </p>
+          <div class="info_other">
+                    <span class="mall fl">{{ v.productFrom}}|{{ v.productTime }}
+                    </span>
+                    <span class="comment fr">
+                      <i></i>
+                      {{ v.productComCount }}
+                    </span>
+          </div>
+        </div>
+      </a>
+    </li>
+  {{ /each }}
+</script>

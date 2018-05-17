@@ -1,0 +1,202 @@
+
+
+
+@import "variable";
+@import "normalize";
+@import "base";
+
+
+//mm
+.mm_main{
+  width: 100%;
+  //height: 560rem/@base;
+  border-top: 2px solid #ccc;
+
+  .main_list{
+
+    background-color: #fff;
+
+
+
+    ul li{
+      float: left;
+      width: 25%;
+      height: 145rem/@base;
+      margin-bottom: 30rem/@base;
+    }
+
+    ul li a{
+      display: block;
+      text-align: center;
+      padding: 40rem/@base 0;
+
+    }
+
+    ul li img{
+      width: 72rem/@base;
+      height:72rem/@base;
+      margin: 0 auto;
+    }
+
+    ul li p{
+      margin-top: 10rem/@base;
+    }
+    ul li p:hover{
+      text-decoration: none;
+    }
+
+    ul li .current{
+      display: none;
+    }
+
+    li:nth-child(8)~li{
+      display: none;
+    }
+
+
+  }
+  //超值折扣推荐
+  .main_disco{
+    width: 100%;
+    height: 70rem/@base;
+    background-color: @mmColor;
+    position: relative;
+    padding-right: 43rem/@base;
+
+    span{
+      width: 100%;
+      height: 35rem/@base;
+      line-height: 70rem/@base ;
+      color: #fff;
+      font-size: 30rem/@base;
+      margin-left: 20rem/@base;
+    }
+    a{
+      width: 56rem/@base;
+      display: block;
+      position: absolute;
+      top:0;
+      right: 0;
+      margin-right: 20rem/@base;
+
+      img{
+        width: 43rem/@base;
+        display: block;
+        margin: 15rem/@base auto;
+      }
+    }
+  }
+
+  //产品区域-
+  .main_product{
+    width: 100%;
+    background-color: #ffffff;
+    ul li{
+      width: 100%;
+      height: 256rem/@base;
+      border-bottom: 1px solid #ccc;
+      padding:20rem/@base;
+      padding-left: 165rem/@base;
+      position: relative;
+    }
+    ul li a{
+      display: block;
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+
+
+      .pic{
+        width: 165rem/@base;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top:0;
+
+        img{
+          width: 144rem/@base;
+          height: 144rem/@base;
+          margin: 50rem/@base auto;
+        }
+      }
+      .info{
+        width: 100%;
+        height:100%;
+
+
+        .info_title{
+          height: 70%;
+          color: #333;
+          font-size: 15px;
+          padding-left: 20rem/@base;
+
+        }
+        .info_other{
+          height: 30%;
+          color: #ccc;
+
+          .mall{
+            padding-left: 20rem/@base;
+          }
+          .comment{
+            padding-right: 20rem/@base;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  //更多优惠信息
+  .main_getmore{
+    width: 100%;
+    margin-top:20rem/@base;
+    padding: 0 30rem/@base;
+
+    .more{
+      display: block;
+      width: 100%;
+      height: 60rem/@base;
+      line-height: 60rem/@base;
+      text-align: center;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 10rem/@base;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+
+  .main_rank{
+    width: 100%;
+    height: 70rem/@base;
+    background-color: @mmColor;
+    position: relative;
+    padding-right: 43rem/@base;
+    margin-top: 30rem/@base;;
+
+    span{
+      width: 100%;
+      height: 35rem/@base;
+      line-height: 70rem/@base ;
+      color: #fff;
+      font-size: 30rem/@base;
+      margin-left: 20rem/@base;
+    }
+    a{
+      width: 56rem/@base;
+      display: block;
+      position: absolute;
+      top:0;
+      right: 0;
+      margin-right: 20rem/@base;
+
+      img{
+        width: 43rem/@base;
+        display: block;
+        margin: 15rem/@base auto;
+      }
+    }
+  }
+}
