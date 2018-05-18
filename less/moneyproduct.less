@@ -1,0 +1,81 @@
+@import "variable";
+// 将所有浏览器的样式统一
+@import "normalize";
+// 去掉一些我们不需要的样式, 里面也可以放一些公共样式
+@import "base";
+.mm_top{
+  width: 100%;
+  height: 100rem/@base;
+  background-color: @mmColor;
+
+  .mm_left{
+    width: 100rem/@base;
+    height: 100%;
+  }
+  img{
+    width: 50rem/@base;
+    display: block;
+    margin: 25rem/@base auto;
+  }
+  .mm_right{
+    width: 100rem/@base;
+    height: 100%;
+  }
+  .center{
+    text-align: center;
+    line-height: 100rem/@base;
+    font-size: 16px;
+    color: #fff;
+  }
+
+}
+
+.mm_main{
+  width: 100%;
+  padding: 10rem/@base;
+  a{
+    text-decoration: none;
+  }
+  .title{
+    font-size: 16px;
+    margin-bottom: 5rem/@base;
+
+    .infos{
+      margin-top:15rem/@base;
+      color: #666;
+      font-size: 12px;
+    }
+  }
+
+  .content{
+    background-color: pink;
+    padding: 10rem/@base;
+    .smlpic{
+      width: 175rem/@base;
+      height: 175rem/@base;
+      background-color: yellowgreen;
+      float: right;
+    }
+    .bigpic{
+      width: 350rem/@base;
+      height:350rem/@base;
+      margin: 0 auto;
+    }
+    .text{
+      font-size: 14px;
+      line-height: 24px;
+      color: #666;
+      letter-spacing: 2px;
+
+    }
+    .gobuy{
+      width: 100%;
+      height: 60rem/@base;
+      padding: 0 20rem/@base;
+      background-color: @mmColor;
+      
+    }
+  }
+
+
+}

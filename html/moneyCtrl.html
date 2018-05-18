@@ -44,7 +44,21 @@
       </ul>
     </div>
 
+    <div class="main_page">
+      <div class="item prev">
+        <a href="javascript:;">上一页</a>
+      </div>
+      <div class="item pageh">
+        <select >
 
+          <!--<option value="2">2/3</option>-->
+          <!--<option value="3">3/3</option>-->
+        </select>
+      </div>
+      <div class="item next">
+        <a href="javascript:;">下一页</a>
+      </div>
+    </div>
 
 
   </div>
@@ -116,5 +130,12 @@
       </div>
     </a>
   </li>
+  {{ /each }}
+</script>
+
+<!--分页渲染-->
+<script type="text/html" id="pageTemp">
+  {{ each pageArr v i }}
+  <option value="{{ v }}">{{ i + 1 +'/' + leng }}</option>
   {{ /each }}
 </script>
