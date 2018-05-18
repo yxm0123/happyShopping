@@ -5,8 +5,9 @@
   <title>比价搜索</title>
   <script src="../lib/lib-flexible/flexible.js"></script>
   <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/product.css">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/productlist.css">
+
 
 </head>
 <body>
@@ -46,38 +47,42 @@
           <a href="index.html">首页></a>
         </li>
         <li>
-          <a href="category.html">全部分类></a>
+          <a href="javascript:;" class="tv">电视></a>
         </li>
         <li>
           <a class ="cataName" href="javascript:;">电视</a>
         </li>
       </ul>
     </div>
-    <!--产品列表-->
-    <div class="main_product">
-      <ul class="product_list">
-        <!--动态渲染-->
+    <!--产品详情-->
 
+    <!--渲染区域-->
+    <div class="box">
+
+    </div>
+    <div class="main_math">
+      <ul class="clearfix">
+        <li><a href="javascript:;">比价购买</a></li>
+        <li><a href="javascript:;">产品参数</a></li>
+        <li><a href="javascript:;">优选评价</a></li>
       </ul>
     </div>
+    <!--网友评价-->
+    <div class="main_common">
+      <div class="com">网友评价</div>
+      <div class="commall">
+        <ul>
 
-    <!--上一页下一页-->
-    <div class="main_page">
-      <div class="item prev">
-        <a href="javascript:;">上一页</a>
-      </div>
-      <div class="item pageh">
-        <select >
-
-          <!--<option value="2">2/3</option>-->
-          <!--<option value="3">3/3</option>-->
-        </select>
-      </div>
-      <div class="item next">
-        <a href="javascript:;">下一页</a>
+        </ul>
       </div>
     </div>
+    <div class="main_getmore">
+
+      <a  class="more" href="moneyCtrl.html">查看更多评价>></a>
+    </div>
   </div>
+
+
 
   <!--尾部区域-->
   <div class="mm_footer">
@@ -115,43 +120,40 @@
 <script src="../lib/jquery/jquery.min.js"></script>
 <script src="../lib/artTemplate/template-web.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/productlist.js"></script>
+<script src="../js/product.js"></script>
 
 <!--渲染-->
-<script type="text/html" id="pddTemp">
+<script type=text/html id="detilTemp">
 
   {{ each result v i }}
-  <li >
-    <a href="product.html?productId={{ v.productId }}&categoryId={{v.categoryId}}">
-      <div class="pic fl">
-        {{@ v.productImg}}
-      </div>
+  <div class="main_detil">
+    <div class="pic">
+      {{@ v.productImg}}
+    </div>
+    <p class="title">{{ v.productName }}</p>
+  </div>
 
-      <!--信息部分-->
-      <div class="info fr">
-        <p class="info_title">{{ v.productName }}
-          <br>
-          <br>
-          <br>
-          <span style="color: red">{{ v.productPrice }}</span>
-        </p>
-        <div class="info_other">
-                    <span class="mall fl">{{ v.productQuote}}</span>
-                    <span class="comment fr">
-                      <i></i>
-                      {{ v.productCom }}
-                    </span>
-        </div>
-      </div>
-    </a>
+  <!--参数-->
+
+
+  <div class="main_jdd">
+    {{@ v.bjShop }}
+  </div>
+
+  {{ /each }}
+</script>
+<!--评论渲染-->
+<script type="text/html" id="comTemp">
+  {{ each result v i }}
+  <li class="item">
+    <div class="info-top clearfix">
+      <span class="fl">{{ v.comName}}</span>
+      <span class="fr">{{ v.comTime}}</span>
+    </div>
+    <p>{{ v.comFrom }}</p>
+    <div class="info-bottom">
+     {{ v.comContent }}
+    </div>
   </li>
   {{ /each }}
 </script>
-
-<!--分页模板-->
-<script type="text/html" id="pageTemp">
-  {{ each pageArr v i }}
-    <option value="{{ v }}">{{ i + 1 +'/' + leng }}</option>
-  {{ /each }}
-</script>
-

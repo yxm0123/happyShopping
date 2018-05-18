@@ -16,7 +16,7 @@ $(function(){
       categoryid:categoryid
     },
     success:function(info){
-      //console.log(info);
+      console.log(info);
 
       var txt =info.result[0].category;
       $('.cataName').html(txt);
@@ -36,7 +36,7 @@ $(function(){
         pageid:currentPage
       },
       success:function(info){
-        console.log(info);
+        //console.log(info);
 
         var htmlStr=template('pddTemp',info);
         $('.main_product .product_list').html(htmlStr);
@@ -90,7 +90,7 @@ $(function(){
   //点击下一页 切换到下一页
 
   $('.next').click(function(){
-    
+
 
     currentPage ++;
     if(currentPage > pagetotal){
