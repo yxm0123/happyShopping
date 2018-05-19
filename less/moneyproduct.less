@@ -48,13 +48,18 @@
   }
 
   .content{
-    background-color: pink;
+
+    //background-color: pink;
     padding: 10rem/@base;
     .smlpic{
       width: 175rem/@base;
       height: 175rem/@base;
       background-color: yellowgreen;
       float: right;
+
+      img{
+        background-color: transparent;
+      }
     }
     .bigpic{
       width: 350rem/@base;
@@ -68,14 +73,144 @@
       letter-spacing: 2px;
 
     }
-    .gobuy{
-      width: 100%;
-      height: 60rem/@base;
-      padding: 0 20rem/@base;
-      background-color: @mmColor;
-      
-    }
+
   }
 
+  .golink{
+    width: 100%;
+    height: 60rem/@base;
+    line-height: 60rem/@base;
+    padding: 0 20rem/@base;
+    background-color: @mmColor;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 30rem/@base;
+    margin-bottom: 30rem/@base;
 
+
+  }
+  .city{
+    text-align: center;
+    margin-top: 20rem/@base;
+    ul{
+      display: inline-block;
+      border-radius: 4rem/@base;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    li{
+      font-size: 14px;
+      border-bottom: 1px dotted #c0c0c0;
+      line-height: 60rem/@base;
+
+      a{
+        display: block;
+        padding: 0 40rem/@base;
+      }
+      span{
+        padding: 0 40rem/@base;
+
+        strong{
+          float: right;
+          padding: 0 40rem/@base;
+          color: #f27b04;
+        }
+      }
+    }
+
+  }
+
+  .tit{
+    font-weight: bold;
+    padding: 0 40rem/@base;
+    font-size: 14px;
+    margin-bottom: 30rem/@base;
+    margin-top:30rem/@base ;
+  }
+  .reply{
+
+    .form{
+      width: 100%;
+      border: 1px solid #eceae8;
+      border-radius:20rem/@base;
+      padding-top: 5rem/@base;
+      padding-left:5rm/@base;
+
+      textarea{
+        width: 100%;
+        height: 120rem/@base;
+        font-size: 14px;
+        line-height: 40rem/@base;
+        border-radius:20rem/@base;
+        background-color: transparent;
+      }
+
+      .ctrl{
+        background-color: #fbfbfb;
+        position: relative;
+        height: 70rem/@base;
+
+        input{
+          width: 180rem/@base;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          bottom:0;
+          border: 2px solid #ff841d;
+          background-color: #ff841d;
+          color: #fff;
+          border-radius: 10rem/@base;
+          vertical-align: middle;
+          font-size: 14px;
+
+        }
+      }
+
+
+    }
+
+
+  }
+
+  .list{
+    ul li{
+      width: 100%;
+      padding-left: 80rem /@base ;
+      position: relative;
+      margin-bottom: 30rem/@base;
+      overflow: hidden;
+
+
+      .userimg{
+        width: 80rem /@base;
+        height: 80px /@base;
+        background-color: pink;
+        position: absolute;
+        left: 0;
+        top:0;
+      }
+
+      .con{
+        padding-left: 30rem/@base;
+        font-size: 14px;
+        .name{
+
+          .username{
+            float: left;
+            color: #5997c0;
+
+          }
+          .time{
+            float: right;
+          }
+        }
+
+        .content{
+
+        }
+      }
+
+    }
+  }
 }

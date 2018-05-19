@@ -14,6 +14,9 @@ $(function(){
       console.log(info);
       var htmlStr = template('moreTemp',info);
       $('.box').html(htmlStr)
+
+      var gobug = info.result[0].productComment;
+      $('.gobug').html(gobug)
     }
   })
   //-----------------

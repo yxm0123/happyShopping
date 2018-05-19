@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/moneyproduct.css">
+  <link rel="stylesheet" href="../css/inlanddiscount.css">
 
 </head>
 <body>
@@ -27,15 +27,7 @@
   <!--主体区域-->
   <div class="mm_main">
 
-    <div class="box">
-      <!--挖个坑-->
 
-    </div>
-    <div class="golink"> 前往购买</div>
-
-    <div class="gobug">
-      <!--渲染-->
-    </div>
   </div>
 
   <!--尾部区域-->
@@ -74,47 +66,10 @@
 <script src="../lib/jquery/jquery.min.js"></script>
 <script src="../lib/artTemplate/template-web.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/moneyproduct.js"></script>
+<script src="../js/inlanddiscount.js"></script>
 
-<script type="text/html" id="moreTemp">
-  {{ each result v i }}
-  <div class="title">
-    <h3>{{ v.productName }}</h3>
-    <p class='price' style="color: red">{{ v.productPinkage }}</p>
-    <div class="infos">
-      <span>{{ v.productFrom }}</span>
-      <span>{{ v.productTime }}</span>
-      <span>{{ v.productTips }}</span>
-      <span>
-        <a href="javascript:;">{{ v.productComCount }}</a>
-      </span>
-      <span></span>
-    </div>
-  </div>
-  <div class="content">
 
-    <div class="smlpic">
-     {{@ v.productImgSm}}
-    </div>
-    <div class="text">
-     {{ v.productInfo2 }}
-    </div>
-    <div class="bigpic">
-      {{@ v.productImg2 }}
-    </div>
 
-    <!--城市-->
-    <div class="city">
-      {{@ v.productCity }}
-    </div>
-    <!--<div class="gobuy">-->
-      <!--{{@ v.productComment}}-->
-    <!--</div>-->
-  </div>
-  {{ /each }}
-</script>
-
-<!--评论渲染-->
 
 
 
