@@ -44,7 +44,7 @@
         <a href="index.html">首页></a>
       </li>
       <li>
-        <a href="category.html">全部分类></a>
+        <a href="inlanddiscount.html">国内折扣></a>
       </li>
       <li>
         <a class ="cataName" href="javascript:;">电视</a>
@@ -87,9 +87,9 @@
 <script src="../lib/jquery/jquery.min.js"></script>
 <script src="../lib/artTemplate/template-web.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/moneyproduct.js"></script>
+<script src="../js/inlandproduct.js"></script>
 
-<script type="text/html" id="moreTemp">
+<script type="text/html" id="landTemp">
   {{ each result v i }}
   <div class="title">
     <h3>{{ v.productName }}</h3>
@@ -107,22 +107,18 @@
   <div class="content">
 
     <div class="smlpic">
-     {{@ v.productImgSm}}
+      {{@ v.productImg}}
     </div>
     <div class="text">
-     {{ v.productInfo2 }}
+      {{ v.productInfo }}
     </div>
     <div class="bigpic">
-      {{@ v.productImg2 }}
+      {{@ v.productImg }}
     </div>
 
     <!--城市-->
-    <div class="city">
-      {{@ v.productCity }}
-    </div>
-    <!--<div class="gobuy">-->
-      <!--{{@ v.productComment}}-->
-    <!--</div>-->
+
+
   </div>
   {{ /each }}
 </script>

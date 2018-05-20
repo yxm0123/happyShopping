@@ -4,7 +4,7 @@
 // 去掉一些我们不需要的样式, 里面也可以放一些公共样式
 @import "base";
 body{
-  background-color: #fff;
+  background-color: #f4f4f4;
 }
 .mm_top{
   width: 100%;
@@ -32,51 +32,40 @@ body{
   }
 
 }
+.dd_main{
 
-.mm_main{
-  a{
-    text-decoration: none;
-  }
-  width: 100%;
-  margin-top:40rem/@base ;
+  margin-top: 30rem/@base;
+  border-top: none;
+  padding: 20rem/@base;
+
   ul li{
-
-    width:48%;
-    height:365rem/@base;
-
-    margin-bottom: 20rem/@base;
-  }
-  ul li:nth-child(even){
-    float: right;
-    margin-left: 2%;
-  }
-  ul li:nth-child(odd){
     float: left;
-  }
+    border: 1px solid #000;
+    margin: 6rem/@base;
 
-  li{
 
-    img{
+    a{
       display: block;
-      width: 200rem/@base;
-      height:200rem/@base;
-      margin: 0 auto;
+      .font_dpr(14px);
+      box-sizing: border-box;
+      margin: 20rem/@base;
+
+      .picmg{
+        width: 30rem/@base;
+        height: 30rem/@base;
+        float: left;
+        #img{
+          display: block;
+          width: 30rem/@base;
+          height: 30rem/@base;
+        }
+      }
+
+      p{
+        float: right;
+        margin-left: 10rem/@base;
+        margin-bottom: 20rem/@base;
+      }
     }
   }
-  .m_info{
-    padding-left: 30rem/@base;
-
-
-    .info_title{
-
-      font-size: 14px;
-      font-weight: bold;
-      margin: 30rem/@base 0;
-    }
-    .mall{
-      color: #ccc;
-    }
-  }
-
-
 }

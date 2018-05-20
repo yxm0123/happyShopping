@@ -1,0 +1,68 @@
+@import "variable";
+// 将所有浏览器的样式统一
+@import "normalize";
+// 去掉一些我们不需要的样式, 里面也可以放一些公共样式
+@import "base";
+
+.come_main{
+  margin-top: 30rem/@base;
+  width: 100%;
+  .come_top{
+    width: 100%;
+    height:70rem/@base;
+    line-height: 70rem/@base;
+    background-color: #f4f4f4;
+    padding-left: 20rem/@base;
+    border-top: 2px solid #ccc;
+
+    a{
+      display: block;
+      .font_dpr(16px);
+      color: #874604;
+    }
+  }
+  
+  .come_list{
+    
+    li{
+      background-color: pink;
+      padding: 20rem/@base;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 15rem/@base;
+      background:  url(../images/right.png)no-repeat right center;
+      .num{
+        display: block;
+        width: 50rem/@base;
+        height: 50rem/@base;
+        line-height: 50rem/@base;
+        text-align: center;
+        background-color: #ccc;
+        .font_dpr(16px);
+        color: #fff;
+        float: left;
+      }
+      
+      .lis_right{
+        padding-left: 20rem/@base;
+        overflow: hidden;
+
+        .txt{
+          .font_dpr(14px);
+          margin-bottom: 10rem/@base;
+        }
+      }
+    }
+
+
+  }
+  .come_list li:nth-child(1) .num{
+    background-color: red;
+  }
+  .come_list li:nth-child(2) .num{
+    background-color: orange;
+  }
+  .come_list li:nth-child(3) .num{
+    background-color: greenyellow;
+  }
+}

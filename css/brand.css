@@ -234,43 +234,74 @@ button {
   border: none;
   outline: none;
 }
-.mm_main a {
-  text-decoration: none;
-}
-.mm_main ul li {
-  list-style: none;
-}
-.mm_main ul {
+.come_main {
+  margin-top: 0.4rem;
   width: 100%;
-  border: 1px solid #ccc;
-  padding: 0.13333333rem;
-  background-color: #fff;
 }
-.mm_main ul li {
+.come_main .come_top {
   width: 100%;
-  background-color: #fbfbfb;
-  border-bottom: 1px solid #c0c0c0;
-}
-.mm_main .title {
-  font-size: 16px;
-  line-height: 1.06666667rem;
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+  background-color: #f4f4f4;
   padding-left: 0.26666667rem;
-  font-weight: 700;
+  border-top: 2px solid #ccc;
 }
-.mm_main .title img {
-  width: 0.4rem;
-  float: right;
-  margin-top: 0.33333333rem;
-  margin-right: 0.33333333rem;
+.come_main .come_top a {
+  display: block;
+  font-size: 16px;
+  color: #874604;
 }
-.mm_main .info {
-  display: none;
+[data-dpr="2"] .come_main .come_top a {
+  font-size: 32px;
 }
-.mm_main .info ul li {
-  width: 33%;
-  height: 1.06666667rem;
-  line-height: 1.06666667rem;
-  float: left;
-  border: 1px solid red;
+[data-dpr="3"] .come_main .come_top a {
+  font-size: 48px;
+}
+.come_main .come_list li {
+  background-color: pink;
+  padding: 0.26666667rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.2rem;
+  background: url(../images/right.png) no-repeat right center;
+}
+.come_main .come_list li .num {
+  display: block;
+  width: 0.66666667rem;
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
   text-align: center;
+  background-color: #ccc;
+  font-size: 16px;
+  color: #fff;
+  float: left;
+}
+[data-dpr="2"] .come_main .come_list li .num {
+  font-size: 32px;
+}
+[data-dpr="3"] .come_main .come_list li .num {
+  font-size: 48px;
+}
+.come_main .come_list li .lis_right {
+  padding-left: 0.26666667rem;
+  overflow: hidden;
+}
+.come_main .come_list li .lis_right .txt {
+  font-size: 14px;
+  margin-bottom: 0.13333333rem;
+}
+[data-dpr="2"] .come_main .come_list li .lis_right .txt {
+  font-size: 28px;
+}
+[data-dpr="3"] .come_main .come_list li .lis_right .txt {
+  font-size: 42px;
+}
+.come_main .come_list li:nth-child(1) .num {
+  background-color: red;
+}
+.come_main .come_list li:nth-child(2) .num {
+  background-color: orange;
+}
+.come_main .come_list li:nth-child(3) .num {
+  background-color: greenyellow;
 }

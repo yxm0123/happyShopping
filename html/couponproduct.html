@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/moneyproduct.css">
+  <link rel="stylesheet" href="../css/couponproduct.css">
+
 
 </head>
 <body>
 <div class="mm_container">
   <!--头部区域-->
+
   <div class="mm_top">
     <div class="mm_left fl">
       <a href="index.html">
@@ -22,35 +24,16 @@
     <div class="mm_right fr">
       <img src="images/header_app.png" alt="">
     </div>
-    <div class="center">国内折扣</div>
+    <div class="center">优惠券</div>
   </div>
   <!--主体区域-->
-  <div class="mm_main">
+  <div class="yh_main">
 
-    <div class="box">
-      <!--挖个坑-->
+    <ul>
 
-    </div>
-    <div class="golink"> 前往购买</div>
-
-    <div class="gobug">
-      <!--渲染-->
-    </div>
-  </div>
-
-  <div class="main_nav">
-    <ul class="clearfix">
-      <li>
-        <a href="index.html">首页></a>
-      </li>
-      <li>
-        <a href="category.html">全部分类></a>
-      </li>
-      <li>
-        <a class ="cataName" href="javascript:;">电视</a>
-      </li>
     </ul>
   </div>
+
   <!--尾部区域-->
   <div class="mm_footer">
 
@@ -86,48 +69,30 @@
 </html>
 <script src="../lib/jquery/jquery.min.js"></script>
 <script src="../lib/artTemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/moneyproduct.js"></script>
+<script src="../js/couponproduct.js"></script>
 
-<script type="text/html" id="moreTemp">
+<script type="text/html" id="prTemp">
   {{ each result v i }}
-  <div class="title">
-    <h3>{{ v.productName }}</h3>
-    <p class='price' style="color: red">{{ v.productPinkage }}</p>
-    <div class="infos">
-      <span>{{ v.productFrom }}</span>
-      <span>{{ v.productTime }}</span>
-      <span>{{ v.productTips }}</span>
-      <span>
-        <a href="javascript:;">{{ v.productComCount }}</a>
-      </span>
-      <span></span>
-    </div>
-  </div>
-  <div class="content">
+  <li class="clearfix">
+    <a href="javascript:;">
+      <div class="pic">
+        {{@ v.couponProductImg }}
+      </div>
+      <div class="yui_right">
+        <div class="title">
+          <div class="node">{{ v.couponProductName }}</div>
+          <p><strong>{{ v.couponProductPrice }}</strong> <span> > </span></p>
+        </div>
+        <div class="time">{{ v.couponProductTime }}</div>
+      </div>
 
-    <div class="smlpic">
-     {{@ v.productImgSm}}
-    </div>
-    <div class="text">
-     {{ v.productInfo2 }}
-    </div>
-    <div class="bigpic">
-      {{@ v.productImg2 }}
-    </div>
-
-    <!--城市-->
-    <div class="city">
-      {{@ v.productCity }}
-    </div>
-    <!--<div class="gobuy">-->
-      <!--{{@ v.productComment}}-->
-    <!--</div>-->
-  </div>
+    </a>
+  </li>
   {{ /each }}
 </script>
 
-<!--评论渲染-->
 
 
 

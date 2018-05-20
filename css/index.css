@@ -187,9 +187,13 @@ th {
 body {
   font-size: 14px;
   font-family: 'Microsoft YaHei', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
-a {
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
   color: #333;
   text-decoration: none;
 }
@@ -230,15 +234,15 @@ button {
   border: none;
   outline: none;
 }
-a {
-  text-decoration: none;
-}
 .mm_main {
   width: 100%;
   border-top: 2px solid #ccc;
 }
 .mm_main .main_list {
   background-color: #fff;
+}
+.mm_main .main_list p {
+  text-decoration: none;
 }
 .mm_main .main_list ul li {
   float: left;

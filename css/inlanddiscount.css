@@ -187,9 +187,13 @@ th {
 body {
   font-size: 14px;
   font-family: 'Microsoft YaHei', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
-a {
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
   color: #333;
   text-decoration: none;
 }
@@ -230,8 +234,8 @@ button {
   border: none;
   outline: none;
 }
-a {
-  text-decoration: none;
+body {
+  background-color: #fff;
 }
 .mm_top {
   width: 100%;
@@ -256,4 +260,40 @@ a {
   line-height: 1.33333333rem;
   font-size: 16px;
   color: #fff;
+}
+.mm_main {
+  width: 100%;
+  margin-top: 0.53333333rem;
+}
+.mm_main a {
+  text-decoration: none;
+}
+.mm_main ul li {
+  width: 48%;
+  height: 4.86666667rem;
+  margin-bottom: 0.26666667rem;
+}
+.mm_main ul li:nth-child(even) {
+  float: right;
+  margin-left: 2%;
+}
+.mm_main ul li:nth-child(odd) {
+  float: left;
+}
+.mm_main li img {
+  display: block;
+  width: 2.66666667rem;
+  height: 2.66666667rem;
+  margin: 0 auto;
+}
+.mm_main .m_info {
+  padding-left: 0.4rem;
+}
+.mm_main .m_info .info_title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0.4rem 0;
+}
+.mm_main .m_info .mall {
+  color: #ccc;
 }

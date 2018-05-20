@@ -234,43 +234,67 @@ button {
   border: none;
   outline: none;
 }
-.mm_main a {
-  text-decoration: none;
+body {
+  background-color: #f4f4f4;
 }
-.mm_main ul li {
-  list-style: none;
-}
-.mm_main ul {
+.mm_top {
   width: 100%;
-  border: 1px solid #ccc;
-  padding: 0.13333333rem;
-  background-color: #fff;
+  height: 1.33333333rem;
+  background-color: #ff841d;
 }
-.mm_main ul li {
-  width: 100%;
-  background-color: #fbfbfb;
-  border-bottom: 1px solid #c0c0c0;
+.mm_top .mm_left {
+  width: 1.33333333rem;
+  height: 100%;
 }
-.mm_main .title {
-  font-size: 16px;
-  line-height: 1.06666667rem;
-  padding-left: 0.26666667rem;
-  font-weight: 700;
+.mm_top img {
+  width: 0.66666667rem;
+  display: block;
+  margin: 0.33333333rem auto;
 }
-.mm_main .title img {
-  width: 0.4rem;
-  float: right;
-  margin-top: 0.33333333rem;
-  margin-right: 0.33333333rem;
+.mm_top .mm_right {
+  width: 1.33333333rem;
+  height: 100%;
 }
-.mm_main .info {
-  display: none;
-}
-.mm_main .info ul li {
-  width: 33%;
-  height: 1.06666667rem;
-  line-height: 1.06666667rem;
-  float: left;
-  border: 1px solid red;
+.mm_top .center {
   text-align: center;
+  line-height: 1.33333333rem;
+  font-size: 16px;
+  color: #fff;
+}
+.dd_main {
+  margin-top: 0.4rem;
+  border-top: none;
+  padding: 0.26666667rem;
+}
+.dd_main ul li {
+  float: left;
+  border: 1px solid #000;
+  margin: 0.08rem;
+}
+.dd_main ul li a {
+  display: block;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin: 0.26666667rem;
+}
+[data-dpr="2"] .dd_main ul li a {
+  font-size: 28px;
+}
+[data-dpr="3"] .dd_main ul li a {
+  font-size: 42px;
+}
+.dd_main ul li a .picmg {
+  width: 0.4rem;
+  height: 0.4rem;
+  float: left;
+}
+.dd_main ul li a .picmg #img {
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+}
+.dd_main ul li a p {
+  float: right;
+  margin-left: 0.13333333rem;
+  margin-bottom: 0.26666667rem;
 }

@@ -42,30 +42,24 @@ $(function () {
   })
 
 
+  var goTop = document.getElementsByClassName('goTop')[0];
+
+
+
+  goTop.onclick=function(){
+    console.log(55);
+    go();
+
+  }
+
+
   //4.回到顶部
   //$('.goTop').click(function(){
   //  console.log(1);
   //  $('html,body').animate({'scrollTop':0},1000)
   //});
 
-  var goTop = document.getElementsByClassName('goTop')[0];
 
-  var id;
-
-  goTop.onclick=function(){
-    console.log(55);
-
-    id=setInterval(function(){
-
-      var current = document.documentElement.scrollTop;
-
-      if(current <=0){
-        clearInterval(id);
-        document.documentElement.scrollTop=0;
-      }
-      document.documentElement.scrollTop-=20;
-    },20)
-  }
 
   //-----------------------
 })

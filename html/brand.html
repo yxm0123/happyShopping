@@ -6,7 +6,8 @@
   <script src="../lib/lib-flexible/flexible.js"></script>
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/productlist.css">
+  <link rel="stylesheet" href="../css/brand.css">
+
 
 </head>
 <body>
@@ -38,44 +39,14 @@
   </div>
 
   <!--主体区域-->
-  <div class="mm_main">
-    <!--导航-->
-    <div class="main_nav">
-      <ul class="clearfix">
-        <li>
-          <a href="index.html">首页></a>
-        </li>
-        <li>
-          <a href="category.html">全部分类></a>
-        </li>
-        <li>
-          <a class ="cataName" href="javascript:;">电视</a>
-        </li>
-      </ul>
+  <div class="come_main">
+    <div class="come_top">
+      <a href="javascript:;">平板电视那个牌子好</a>
     </div>
-    <!--产品列表-->
-    <div class="main_product">
-      <ul class="product_list">
-        <!--动态渲染-->
+    <div class="come_list">
+      <ul>
 
       </ul>
-    </div>
-
-    <!--上一页下一页-->
-    <div class="main_page">
-      <div class="item prev">
-        <a href="javascript:;">上一页</a>
-      </div>
-      <div class="item pageh">
-        <select >
-
-          <!--<option value="2">2/3</option>-->
-          <!--<option value="3">3/3</option>-->
-        </select>
-      </div>
-      <div class="item next">
-        <a href="javascript:;">下一页</a>
-      </div>
     </div>
   </div>
 
@@ -115,43 +86,19 @@
 <script src="../lib/jquery/jquery.min.js"></script>
 <script src="../lib/artTemplate/template-web.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/productlist.js"></script>
-
-<!--渲染-->
-<script type="text/html" id="pddTemp">
-
+<script src="../js/brand.js"></script>
+<script type="text/html" id="comeTemp">
   {{ each result v i }}
-  <li >
-    <a href="product.html?productId={{ v.productId }}&categoryId={{v.categoryId}}">
-      <div class="pic fl">
-        {{@ v.productImg}}
-      </div>
-
-      <!--信息部分-->
-      <div class="info fr">
-        <p class="info_title">{{ v.productName }}
-          <br>
-          <br>
-          <br>
-          <span style="color: red">{{ v.productPrice }}</span>
-        </p>
-        <div class="info_other">
-                    <span class="mall fl">{{ v.productQuote}}</span>
-                    <span class="comment fr">
-                      <i></i>
-                      {{ v.productCom }}
-                    </span>
-        </div>
+  <li>
+    <a href="productlist.html?categoryid={{ v.categoryId }}">
+      <span class="num">{{ v.brandId +1}}</span>
+      <div class="lis_right">
+        <div class="txt">{{ v.brandName }}</div>
+        <p>{{ v.brandInfo }}</p>
       </div>
     </a>
   </li>
   {{ /each }}
 </script>
 
-<!--分页模板-->
-<script type="text/html" id="pageTemp">
-  {{ each pageArr v i }}
-    <option value="{{ v }}">{{ i + 1 +'/' + leng }}</option>
-  {{ /each }}
-</script>
 

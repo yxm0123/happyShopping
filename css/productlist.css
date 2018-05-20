@@ -187,9 +187,13 @@ th {
 body {
   font-size: 14px;
   font-family: 'Microsoft YaHei', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
-a {
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
   color: #333;
   text-decoration: none;
 }
@@ -229,9 +233,6 @@ body {
 button {
   border: none;
   outline: none;
-}
-a {
-  text-decoration: none;
 }
 .mm_main {
   width: 100%;

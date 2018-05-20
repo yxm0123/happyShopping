@@ -65,5 +65,9 @@ $(function(){
     }
     render()
   })
+
+  $('.goTop').click(function(){
+    go();
+  })
   //------------------
 })

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>慢慢买</title>
+  <script src="../lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/gsproduct.css">
+
+</head>
+<body>
+<div class="mm_container">
+  <!--头部区域-->
+  <div class="mm_top">
+    <div class="mm_left fl">
+      <a href="index.html">
+        <img src="images/icback.svg" alt="">
+      </a>
+    </div>
+    <div class="mm_right fr">
+      <img src="images/header_app.png" alt="">
+    </div>
+    <div class="center">凑单品</div>
+  </div>
+  <!--主体区域-->
+  <div class="gs_main">
+    <div class="bcj_top">
+      <div class="search_icon">
+        <img src="images/search-icon.png" alt="">
+      </div>
+      <!--列表区域-->
+      <div class="lists">
+        <ul class="clearfix">
+          <li class="entry jd_show">
+            京东
+            <i></i>
+
+          </li>
+          <li class="entry hb_show">华北
+          <i></i>
+          </li>
+          <li class="entry pc_show">全部价格
+          <i></i>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <!--京东-->
+    <div class="jd_shop">
+      <ul>
+        <!--京东渲染-->
+      </ul>
+    </div>
+
+    <!--华北-->
+    <div class="hb_shop">
+      <ul>
+        <!--华北渲染-->
+      </ul>
+    </div>
+
+    <!--价格-->
+    <div class="price">
+      <ul>
+        <li class="on">全部价格</li>
+      </ul>
+    </div>
+
+    <!--产品区域-->
+    <div class="jd_product">
+      <ul class="clearfix">
+
+
+      </ul>
+    </div>
+
+  </div>
+
+
+  <!--尾部区域-->
+  <div class="mm_footer">
+
+    <div class="tables clearfix" >
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="javascript:;" class="goTop">
+        <img src="images/top.jpg" >
+        <span>回到顶部</span>
+      </a>
+    </div>
+
+    <div class="main_msg">
+      <div class="msg_top">
+        <p>
+          <a href="javascript:;" style="color: red">手机APP下载</a>
+          <a href="javascript:;">慢慢买手机版</a>
+          <a href="javascript:;">--掌上比价平台</a>
+
+        </p>
+        <p>
+          <a href="javascript:;">
+            <a href="javascript:;">手机APP下载</a>
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/gsproduct.js"></script>
+<!--京东渲染-->
+<script type="text/html" id="jdTemp">
+  {{ each result v i }}
+    <li data-shop="{{ v.shopId}}"  class="lisItem {{ i === 0? 'on':'' }}">
+      {{ v. shopName}}
+    </li>
+  {{ /each }}
+</script>
+<!--华北渲染-->
+<script type="text/html" id="hbTemp">
+  {{ each result v i }}
+    <li data-area="{{ v.areaId }}"
+        class="lisItem {{ i === 0? 'on':'' }}">
+      {{ v.areaName }}
+    </li>
+  {{ /each }}
+</script>
+
+<script type="text/html" id="pcdTemp">
+  {{ each result v i }}
+  <li class="item">
+    <a href="#">
+      <div class="pic">
+        <img src="{{v.productImg}}">
+      </div>
+      <div class="title">
+        {{ v.productName }}
+      </div>
+      <div class="buy clearfix">
+        <span class="jage">{{ v.productPrice }}</span>
+        <span class="but">去凑单</span>
+      </div>
+    </a>
+  </li>
+  {{ /each }}
+</script>
+
+
+

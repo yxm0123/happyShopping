@@ -2,7 +2,7 @@
  * Created by yangxiaoman on 2018/5/17.
  */
 
-var ip ="192.168.45.28";
+var ip ="192.168.45.21";
 
 function getSearch(key){
 
@@ -24,4 +24,18 @@ function getSearch(key){
   });
   return obj[key]
 //---------------
+}
+
+var id;
+function go(){
+  id=setInterval(function(){
+
+    var current = document.documentElement.scrollTop;
+
+    if(current <=0){
+      clearInterval(id);
+      document.documentElement.scrollTop=0;
+    }
+    document.documentElement.scrollTop-=20;
+  },20);
 }

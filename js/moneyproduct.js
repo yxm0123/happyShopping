@@ -17,7 +17,14 @@ $(function(){
 
       var gobug = info.result[0].productComment;
       $('.gobug').html(gobug)
+
+      var txt = info.result[0].productName;
+      $('.cataName').html(txt);
     }
+  })
+
+  $('.goTop').click(function(){
+    go();
   })
   //-----------------
 })

@@ -7,12 +7,18 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/moneyproduct.css">
+  <link rel="stylesheet" href="../css/baicaijia.css">
 
 </head>
 <body>
 <div class="mm_container">
+  <!--向上滚动-->
+  <div class="gotop">
+    <img src="images/back.png" alt="">
+  </div>
   <!--头部区域-->
+
+
   <div class="mm_top">
     <div class="mm_left fl">
       <a href="index.html">
@@ -22,35 +28,34 @@
     <div class="mm_right fr">
       <img src="images/header_app.png" alt="">
     </div>
-    <div class="center">国内折扣</div>
+    <div class="center">白菜价- 淘宝内优惠券</div>
   </div>
   <!--主体区域-->
   <div class="mm_main">
+   <div class="bcj_top">
+     <div class="search_icon">
+       <img src="images/search-icon.png" alt="">
+     </div>
+     <div class="lists">
+       <ul class="clearfix">
+        <!--渲染列表-->
 
-    <div class="box">
-      <!--挖个坑-->
+       </ul>
+     </div>
+   </div>
 
+    <!--产品区域-->
+    <div class="bcj_pro">
+      <ul class="clearfix">
+        <!--内容渲染-->
+
+      </ul>
     </div>
-    <div class="golink"> 前往购买</div>
 
-    <div class="gobug">
-      <!--渲染-->
-    </div>
+
+
   </div>
 
-  <div class="main_nav">
-    <ul class="clearfix">
-      <li>
-        <a href="index.html">首页></a>
-      </li>
-      <li>
-        <a href="category.html">全部分类></a>
-      </li>
-      <li>
-        <a class ="cataName" href="javascript:;">电视</a>
-      </li>
-    </ul>
-  </div>
   <!--尾部区域-->
   <div class="mm_footer">
 
@@ -86,48 +91,55 @@
 </html>
 <script src="../lib/jquery/jquery.min.js"></script>
 <script src="../lib/artTemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/moneyproduct.js"></script>
-
-<script type="text/html" id="moreTemp">
+<script src="../js/baicaijia.js"></script>
+<script type="text/html" id="listsTemp">
   {{ each result v i }}
-  <div class="title">
-    <h3>{{ v.productName }}</h3>
-    <p class='price' style="color: red">{{ v.productPinkage }}</p>
-    <div class="infos">
-      <span>{{ v.productFrom }}</span>
-      <span>{{ v.productTime }}</span>
-      <span>{{ v.productTips }}</span>
-      <span>
-        <a href="javascript:;">{{ v.productComCount }}</a>
-      </span>
-      <span></span>
-    </div>
-  </div>
-  <div class="content">
+    <li data-id= {{ v.titleId }}>
+      <a href="javascript:;">{{ v.title }}</a>
+    </li>
+  {{ /each}}
+</script>
 
-    <div class="smlpic">
-     {{@ v.productImgSm}}
-    </div>
-    <div class="text">
-     {{ v.productInfo2 }}
-    </div>
-    <div class="bigpic">
-      {{@ v.productImg2 }}
-    </div>
+<!--内容渲染-->
+<script type="text/html" id="produTemp">
+  {{ each result v i }}
+  <li>
+    <a href="baicaijia.html">
+      <div class="pic">
+        {{@ v.productImg }}
+      </div>
+    </a>
 
-    <!--城市-->
-    <div class="city">
-      {{@ v.productCity }}
+    <div class="info">
+      <div class="text">
+        <p class="in_top">{{@ v.productName }}</p>
+        <div class="in_bottom">
+          {{@ v.productPrice }}
+        </div>
+      </div>
+      <!--折扣-->
+      <div class="disco clearfix">
+        {{@ v.productCouponRemain}}
+        <div class="link">
+          <div class="lin_left">
+            {{@ v.productCoupon }}
+
+          </div>
+          <div class="lin_right">
+            {{@ v.productHref}}
+
+          </div>
+        </div>
+      </div>
+
     </div>
-    <!--<div class="gobuy">-->
-      <!--{{@ v.productComment}}-->
-    <!--</div>-->
-  </div>
+  </li>
   {{ /each }}
 </script>
 
-<!--评论渲染-->
+
 
 
 

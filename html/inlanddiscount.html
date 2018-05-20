@@ -26,9 +26,13 @@
   </div>
   <!--主体区域-->
   <div class="mm_main">
+    <ul class="clearfix">
 
+
+    </ul>
 
   </div>
+
 
   <!--尾部区域-->
   <div class="mm_footer">
@@ -36,7 +40,7 @@
     <div class="tables clearfix" >
       <a href="#">登录</a>
       <a href="#">注册</a>
-      <a href="#" class="goTop">
+      <a href="javascript:;" class="goTop">
         <img src="images/top.jpg" >
         <span>回到顶部</span>
       </a>
@@ -67,7 +71,26 @@
 <script src="../lib/artTemplate/template-web.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/inlanddiscount.js"></script>
-
+<script type="text/html" id="discTemp">
+  {{ each result  v i }}
+  <li>
+    <a href="inlandproduct.html?productId={{ v.productId }}">
+      <div class="m_pic">
+        {{@ v.productImg}}
+      </div>
+      <div class="m_info">
+        <div class="info_title">{{ v.productName }}</div>
+        <div class="other">
+          <div class="pric">{{ v.productPrice }}</div>
+          <div class="mall">
+            {{ v.productPrice}}|{{ v.productTime}}
+          </div>
+        </div>
+      </div>
+    </a>
+  </li>
+  {{ /each }}
+</script>
 
 
 

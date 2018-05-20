@@ -45,4 +45,7 @@ $(function(){
     }
   })
 
+  $('.goTop').click(function(){
+    go();
+  })
 })
