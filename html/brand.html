@@ -91,7 +91,7 @@
   {{ each result v i }}
   <li>
     <a href="productlist.html?categoryid={{ v.categoryId }}">
-      <span class="num">{{ v.brandId +1}}</span>
+      <span class="num">{{i+1}}</span>
       <div class="lis_right">
         <div class="txt">{{ v.brandName }}</div>
         <p>{{ v.brandInfo }}</p>
