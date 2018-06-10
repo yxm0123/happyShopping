@@ -9,6 +9,10 @@ body{
 .mm_top{
   width: 100%;
   height: 100rem/@base;
+  position: fixed;
+  left: 0;
+  top:0;
+  z-index: 999;
   background-color: @mmColor;
 
   .mm_left{
@@ -34,11 +38,12 @@ body{
 }
 
 .mm_main{
+  border-top:none;
   a{
     text-decoration: none;
   }
   width: 100%;
-  margin-top:40rem/@base ;
+  //margin-top:40rem/@base ;
   ul li{
 
     width:48%;

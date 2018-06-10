@@ -11,6 +11,7 @@ $(function () {
   $.ajax({
     dataType: 'json',
     url: 'http://' + ip + ':9999/api/getindexmenu',
+    //url: 'http://' + ip + ':9999/api/getindexmenu',
     success: function (info) {
 
       console.log(info);

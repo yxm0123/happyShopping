@@ -239,12 +239,17 @@ button {
   min-width: 320px;
   max-width: 750px;
   margin: 0 auto;
+  padding-top: 2.66666667rem;
 }
 .mm_header {
   width: 100%;
   height: 2.66666667rem;
   min-width: 320px;
   max-width: 750px;
+  position: fixed;
+  top: 0;
+  lef: 0;
+  z-index: 999;
 }
 .mm_header .header_top {
   width: 100%;
@@ -363,7 +368,7 @@ button {
 }
 .mm_main .main_page .item {
   display: inline-block;
-  width: 33%;
+  width: 32%;
   height: 100%;
   text-align: center;
   line-height: 0.93333333rem;
@@ -375,4 +380,32 @@ button {
   width: 100%;
   height: 100%;
   border-radius: 0.13333333rem;
+}
+.mm_top {
+  width: 100%;
+  height: 1.33333333rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: #ff841d;
+}
+.mm_top .mm_left {
+  width: 1.33333333rem;
+  height: 100%;
+}
+.mm_top img {
+  width: 0.66666667rem;
+  display: block;
+  margin: 0.33333333rem auto;
+}
+.mm_top .mm_right {
+  width: 1.33333333rem;
+  height: 100%;
+}
+.mm_top .center {
+  text-align: center;
+  line-height: 1.33333333rem;
+  font-size: 16px;
+  color: #fff;
 }

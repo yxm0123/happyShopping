@@ -240,6 +240,10 @@ body {
 .mm_top {
   width: 100%;
   height: 1.33333333rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
   background-color: #ff841d;
 }
 .mm_top .mm_left {
@@ -262,8 +266,8 @@ body {
   color: #fff;
 }
 .mm_main {
+  border-top: none;
   width: 100%;
-  margin-top: 0.53333333rem;
 }
 .mm_main a {
   text-decoration: none;

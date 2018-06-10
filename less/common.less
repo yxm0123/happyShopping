@@ -12,6 +12,7 @@
   min-width: 320px;
   max-width: 750px;
   margin: 0 auto;
+  padding-top: 200rem/@base;
 
 }
 .mm_header{
@@ -19,7 +20,11 @@
   height: 200rem/@base;
   min-width: 320px;
   max-width: 750px;
-  //background-color: greenyellow;
+  position: fixed;
+  top:0;
+  lef:0;
+  z-index: 999;
+  
 
 
   .header_top{
@@ -54,6 +59,7 @@
   }
 
   .header_bottom{
+
     width: 100%;
     height: 100rem/@base;
 
@@ -161,12 +167,11 @@
   .main_page{
     width: 100%;
     height: 90rem/@base;
-
     padding: 10rem/@base;
 
     .item{
       display:inline-block;
-      width: 33%;
+      width: 32%;
       height: 100%;
       text-align: center;
       line-height: 70rem/@base;
@@ -181,4 +186,35 @@
       border-radius: 10rem/@base;
     }
   }
+}
+
+.mm_top{
+  width: 100%;
+  height: 100rem/@base;
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: 999;
+  background-color: @mmColor;
+
+  .mm_left{
+    width: 100rem/@base;
+    height: 100%;
+  }
+  img{
+    width: 50rem/@base;
+    display: block;
+    margin: 25rem/@base auto;
+  }
+  .mm_right{
+    width: 100rem/@base;
+    height: 100%;
+  }
+  .center{
+    text-align: center;
+    line-height: 100rem/@base;
+    font-size: 16px;
+    color: #fff;
+  }
+
 }
